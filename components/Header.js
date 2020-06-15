@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image, Button } from 'react-native';
-import { AntDesign, FontAwesome5 } from '@expo/vector-icons';
+import { Ionicons, AntDesign, FontAwesome5 } from '@expo/vector-icons';
 
 const Header = (props) => {
   const [enteredBook, setEnteredBook] = useState('');
@@ -27,9 +27,10 @@ const Header = (props) => {
             <FontAwesome5 name = "user" size = {24} color="black" />            
         </View>
 
-        <View style = {styles.textArea}>
+        <View style = {styles.searchSection}>
             <TextInput style = {styles.textBox}
                 placeholder="Search for a book" 
+                placeholderTextColor = 'gray'
                 onChangeText = {bookInputHandler} 
                 value = {enteredBook}
             />
@@ -56,18 +57,29 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     },
-    textArea: {
+
+    searchSection: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        alignContent: 'center',
+        paddingTop: 20,
         paddingBottom: 10,
+        height: 40,      
     },
     textBox: {
         alignSelf: 'center',
         borderColor: 'black', 
         borderWidth: 1,
-        width: '75%',
         padding: 5,
         paddingTop: 2,
         paddingBottom: 2,
+        height: 40,
+        width: '80%',
+        backgroundColor: 'gainsboro',
     },
+
+
     settingButtonStyle: {
         backgroundColor: 'white',
         padding: 1,
