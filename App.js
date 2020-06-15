@@ -10,6 +10,7 @@ export default function App() {
       <View>
         <Text>This is the homepage</Text>
       </View>
+      
     </View>
     
   );

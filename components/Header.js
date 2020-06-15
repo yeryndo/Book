@@ -20,14 +20,14 @@ const Header = (props) => {
                 />
             </TouchableOpacity> */}
 
-            <AntDesign name = "setting" size = {24} color = "black" />
+            <AntDesign name = "setting" size = {27} color = "black" />
 
             <Text style = {styles.mainHome}>{props.title}</Text>
 
             <FontAwesome5 name = "user" size = {24} color="black" />            
         </View>
 
-        <View>
+        <View style = {styles.textArea}>
             <TextInput style = {styles.textBox}
                 placeholder="Search for a book" 
                 onChangeText = {bookInputHandler} 
@@ -44,10 +44,10 @@ Header.defaultProps = {
 }
 
 const styles = StyleSheet.create({
-    header: {
-        paddingTop: 15,
+    header: {        
         justifyContent: 'space-between',
         flexDirection: 'row',
+        paddingTop: 8,
     },
     mainHome: {
         textAlign: 'center',
@@ -56,13 +56,17 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     },
+    textArea: {
+        paddingBottom: 10,
+    },
     textBox: {
+        alignSelf: 'center',
         borderColor: 'black', 
         borderWidth: 1,
-        width: '80%',
+        width: '75%',
         padding: 5,
-        paddingTop: 0,
-        paddingBottom: 0,
+        paddingTop: 2,
+        paddingBottom: 2,
     },
     settingButtonStyle: {
         backgroundColor: 'white',
