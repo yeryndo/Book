@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image, Button } from 'react-native';
-import { Ionicons, AntDesign, FontAwesome5 } from '@expo/vector-icons';
 
 const Header = (props) => {
   const [enteredBook, setEnteredBook] = useState('');
@@ -52,12 +51,12 @@ const styles = StyleSheet.create({
     header: {        
         justifyContent: 'space-between',
         flexDirection: 'row',
-        paddingTop: 8,
+        paddingTop: 6,
     },
     mainHome: {
         textAlign: 'center',
         fontSize: 20,
-        paddingBottom: 10,
+        paddingBottom: 3,
         justifyContent: 'center',
         alignItems: 'center',
     },
@@ -68,7 +67,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         alignContent: 'center',
         paddingTop: 20,
-        paddingBottom: 10,
+        paddingBottom: 20,
         height: 40,      
     },
     textBox: {
