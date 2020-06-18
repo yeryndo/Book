@@ -10,7 +10,6 @@ export default function App() {
       <View>
         <Text>This is the homepage</Text>
       </View>
-      
     </View>
     
   );
@@ -20,7 +19,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingTop: 50,
-    paddingLeft: 10
   }
 });
 
