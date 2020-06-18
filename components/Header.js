@@ -14,17 +14,21 @@ const Header = (props) => {
       <View>
         <View style = {styles.header}>
             
-            {/* <TouchableOpacity style={styles.settingButtonStyle} activeOpacity={0.5}>
+            <TouchableOpacity style={styles.settingButtonStyle} activeOpacity={0.5}>
                 <Image
-                    source={require('../assets/settings.png')}
+                    source={require('../assets/setting.png')}
+                    style = {styles.setting}
                 />
-            </TouchableOpacity> */}
-
-            <AntDesign name = "setting" size = {27} color = "black" />
+            </TouchableOpacity>
 
             <Text style = {styles.mainHome}>{props.title}</Text>
-
-            <FontAwesome5 name = "user" size = {24} color="black" />            
+ 
+            <TouchableOpacity style={styles.settingButtonStyle} activeOpacity={0.5}>
+                <Image
+                    source={require('../assets/profile.jpg')}
+                    style = {styles.profile}
+                />
+            </TouchableOpacity>         
         </View>
 
         <View style = {styles.searchSection}>
@@ -78,15 +82,15 @@ const styles = StyleSheet.create({
         width: '80%',
         backgroundColor: 'gainsboro',
     },
-
-
-    settingButtonStyle: {
-        backgroundColor: 'white',
-        padding: 1,
+    setting: {
         height: 25,
-        width: 25,
-        aspectRatio: 2
+        width: 25
+    },
+    profile: {
+        height: 25,
+        width: 25
     }
+
 })
 
 export default Header;
